@@ -19,3 +19,8 @@ See the `build_arm64.bash` script.
 ```bash
 docker run --name simplehttp-rs --rm -p 3000:3000 kevinmidtown/simplehttp-rs:arm64
 ```
+
+## Usage docker images
+
+* for x64: ghcr.io/kindlychung/simplehttp-rs:latest
+* for arm64: kevinmidtown/simplehttp-rs:arm64
