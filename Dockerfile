@@ -4,6 +4,6 @@ COPY . .
 RUN cargo build --release
 
 FROM debian:bookworm-slim
-WORKDIR /root/
-COPY --from=builder /usr/src/app/target/release/simplehttp-rs .
-CMD ["./simplehttp-rs "]
+COPY --from=builder /usr/src/app/target/release/simplehttp-rs /root/
+RUN chmod a+x /root/simplehttp-rs
+CMD ["/root/simplehttp-rs"]
